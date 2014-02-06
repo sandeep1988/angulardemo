@@ -1,0 +1,16 @@
+<html ng-app="Demo12">
+  <head>
+  </head>
+ <body ng-app="Demo12">
+    <div class="container">
+      <h1 class="text-center">My blog</h1>
+      <div class="row" ng-repeat="post in data.posts">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.contents }}</p>
+
+      </div>
+      <a ng-click="viewPost($index)">Post</a>
+    </div>
+  </body>
+</html>
+

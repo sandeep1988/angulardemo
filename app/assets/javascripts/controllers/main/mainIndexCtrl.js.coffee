@@ -7,3 +7,4 @@
   $scope.viewPost = (postId) ->
     $location.url('/post/'+postId)
 
+@IndexCtrl.$inject = ['$scope', '$location', '$http', 'postData']

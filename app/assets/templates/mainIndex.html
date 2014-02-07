@@ -1,14 +1,21 @@
-<html ng-app="Demo12">
-  <head>
-  </head>
+<html ng-app="Demo12">  
  <body ng-app="Demo12">
-    <div class="container">
-      <h1 class="text-center">My blog</h1>
-      <div class="row" ng-repeat="post in data.posts">
-        <h2><a ng-click="viewPost($index)">{{ post.title }}</a></h2>
-        <p>{{ post.contents }}</p>
-      </div>
-    </div>
+   <div class="navbar navbar-fixed-top">
+     <div class="navbar-inner">
+       <a href="#" class="brand">My blog</a>
+       <ul class="nav pull-right">
+          <li><a ng-click="navNewPost()">New Post</a></li>
+       </ul>
+     </div>
+   </div>
+
+   <div class="container" style="margin-top: 40px">
+     <h1 class="text-center">My blog</h1>
+     <div class="row" ng-repeat="post in data.posts">
+       <h2><a ng-click="viewPost(post.id)">{{ post.title }}</a></h2>
+       <p>{{ post.contents }}</p>
+     </div>
+   </div>
   </body>
 </html>
 

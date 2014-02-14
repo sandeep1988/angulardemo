@@ -1,0 +1,25 @@
+<!-- <h1 class="text-center">{{data.commentId }} - {{data.commentData.comments[data.commentId].name }}</h1>
+<div class="row">
+    <p>{{data.commentData.comments[data.commentId].name }}</p>
+</div> -->
+  <div ng-app="Demo12">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <a href="#" class="brand">My blog</a>
+        <ul class="nav pull-right">
+          <li><a ng-click="navNewPost()">New Post</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+  <html ng-app="Demo12">
+    <div class="container" style="margin-top: 40px">
+      <h1 class="text-center">{{ data.currentComment.name }}</h1>
+      <div class="row">
+        <p>{{ data.currentComment.name }}</p>
+      </div>
+      <div class="row">
+        <button class="btn btn-default" ng-click="editComment()">Edit</button>
+      </div>
+    </div>
+  </html>

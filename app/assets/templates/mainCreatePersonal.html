@@ -1,0 +1,33 @@
+<html ng-app="Demo12">  
+<body ng-app="Demo12">
+  <div ng-controller="PersonalCtrl">
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <a ng-click="navHome()" class="brand">My blog</a>
+    <ul class="nav pull-right">
+      <li><a ng-click="navNewPost()">New Post</a></li>
+      <li><a ng-click="navNewPersonal()">New Personal</a></li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="container" style="margin-top: 40px">
+  <h1 class="text-center">Create new Personal</h1>
+  <form>
+    <fieldset>
+      <label><strong>Name</strong></label>
+      <input class="span12" ng-model="formData.newPersonalName" placeholder="New Personal" type="text" maxlength="50">
+      <label><strong>Age</strong></label>
+      <input class="span12" ng-model="formData.newPersonalAge" placeholder="Age" type="text" >
+      <label><strong>Address</strong></label>
+      <textarea class="span12" style="height: 100px" ng-model="formData.newPersonalAddress" placeholder="Type your address here..."></textarea>
+      <label><strong>Phone number</strong></label>
+      <input class="span12" ng-model="formData.newPersonalPhone" placeholder="Phone Number" type="text" >      
+      <button class="btn btn-primary" ng-click="createPersonal()">Create</button>
+      <button class="btn btn-danger pull-right" ng-click="clearPersonal()">Clear personal</button>
+    </fieldset>
+  </form>
+</div>
+</body>
+</html>

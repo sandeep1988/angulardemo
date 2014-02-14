@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: anguler_db1
+  database: anguler_db2
   pool: 5
   host: localhost
   username: postgres

@@ -9,13 +9,16 @@
     </div>
   </div> 
   <html ng-app="Demo12">
+  <div ng-controller='PostCtrl' ng-init='index()'>
     <div class="container" style="margin-top: 40px">
       <h1 class="text-center">{{ data.currentPost.title }}</h1>
       <div class="row">
+        <p>{{ data.currentPost.author }}</p>
         <p>{{ data.currentPost.contents }}</p>
       </div>
       <div class="row">
         <button class="btn btn-default" ng-click="editPost()">Edit</button>
+        <a ng-click="navNewComment()">New Comment</a>
       </div>
     </div>
   </html>

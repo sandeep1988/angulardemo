@@ -6,6 +6,9 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "rspec-rails", "~> 2.14.0"
 gem 'pg'
+gem 'will_paginate', '~> 3.0.5'
+gem "devise"
+gem 'best_in_place'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

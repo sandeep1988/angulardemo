@@ -2,13 +2,13 @@ angular.module('Demo12').factory('postData', ['$http', ($http) ->
 
   postData =
     data:
-      posts: [{title: 'Loading', contents: ''}]
+      posts: {title: 'Loading', author: '' ,contents: ''}
     isLoaded: false
 
 
   postData.createPost = (newPost) ->
     # Client-side data validation
-    if newPost.newPostTitle == '' or newPost.newPostContents == ''
+    if newPost.newPostTitle == '' or newPost.newPostAuthor == '' or newPost.newPostContents == ''
       alert('Neither the Title nor the Body are allowed to be left blank.')
       return false
 
@@ -16,6 +16,7 @@ angular.module('Demo12').factory('postData', ['$http', ($http) ->
     data =
       new_post:
         title: newPost.newPostTitle
+        author: newPost.newPostAuthor
         contents: newPost.newPostContents
 
     # Do POST request to /posts.json

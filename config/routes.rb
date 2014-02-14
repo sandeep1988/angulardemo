@@ -1,8 +1,11 @@
 Demo12::Application.routes.draw do
+  devise_for :users
+
+  root to: 'main#index'
+  resources :personals
   #get "main/index"
   resources :posts
-  
-  root to: 'main#index'
+  resources :comments
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

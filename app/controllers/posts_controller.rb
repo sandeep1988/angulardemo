@@ -10,16 +10,14 @@ class PostsController < ApplicationController
      respond_with(posts) do |format|
        format.json { render :json => posts.as_json }
      end
-
   end
 
-
   def create
-
     # Create and save new post from data received from the client
     new_post = Post.new
     new_post.title = params[:new_post][:title][0...250] # Get only first 250 characters
     new_post.contents = params[:new_post][:contents]
+    new_post.author = params[:new_post][:author][0...50]
 
     # Confirm post is valid and save or return HTTP error
     if new_post.valid?
@@ -33,7 +31,15 @@ class PostsController < ApplicationController
     respond_with(new_post) do |format|
       format.json { render :json => new_post.as_json }
     end
-
   end
+
+def edit
+  
+  end  
+
+def update
+  
+end 
+
 
 end

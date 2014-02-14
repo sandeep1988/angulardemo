@@ -5,13 +5,16 @@
 
   $scope.formData =
     newPostTitle: ''
+    newPostAuthor: ''
     newPostContents: ''
 
   $scope.createPost = ->
     postData.createPost($scope.formData)
+    $location.url('/')
 
   $scope.clearPost = ->
     $scope.formData.newPostTitle = ''
+    $scope.formData.newPostAuthor = ''
     $scope.formData.newPostContents = ''
 
   $scope.navNewPost = ->

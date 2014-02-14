@@ -5,6 +5,8 @@
        <a href="#" class="brand">My blog</a>
        <ul class="nav pull-right">
           <li><a ng-click="navNewPost()">New Post</a></li>
+          <li><a ng-click="navNewPersonal()">New Personal</a></li>
+          <li><a ng-click="navNewComment()">New Comment</a></li>
        </ul>
      </div>
    </div>
@@ -13,6 +15,7 @@
      <h1 class="text-center">My blog</h1>
      <div class="row" ng-repeat="post in data.posts">
        <h2><a ng-click="viewPost(post.id)">{{ post.title }}</a></h2>
+       <p>{{ post.author }}</p>
        <p>{{ post.contents }}</p>
      </div>
    </div>

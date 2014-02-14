@@ -1,0 +1,23 @@
+  <div ng-app="Demo12">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <a href="#" class="brand">My blog</a>
+        <ul class="nav pull-right">
+          <li><a ng-click="navNewPersonal()">New Personal</a></li>
+        </ul>
+      </div>
+    </div>
+  </div> 
+  <html ng-app="Demo12">
+    <div class="container" style="margin-top: 40px">
+      <h1 class="text-center">{{ data.currentPersonal.name }}</h1>
+      <div class="row">
+        <p>{{ data.currentPersonal.age }}</p>
+        <p>{{ data.currentPersonal.address }}</p>
+        <p>{{ data.currentPersonal.phone_number }}</p>
+      </div>
+      <div class="row">
+        <button class="btn btn-default" ng-click="editPost()">Edit</button>
+      </div>
+    </div>
+  </html>
